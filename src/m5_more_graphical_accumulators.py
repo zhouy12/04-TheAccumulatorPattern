@@ -115,7 +115,7 @@ def draw_squares_from_circle(n, circle, window):
     a = circle.center.x
     b = circle.center.y
 
-    for _ in range(n):
+    for k in range(n):
         center = rg.Point(a, b)
         a = a + circle.radius
         b = b + circle.radius
@@ -242,7 +242,7 @@ def draw_circles_from_rectangle(m, n, rectangle, window):
     window.render()
 
     b = rec_center.y - height / 2 - width / 2
-    for _ in range(n):
+    for k in range(n):
         a = rec_center.x
         cir_center = rg.Point(a, b)
         circle = rg.Circle(cir_center, width / 2)
@@ -356,7 +356,7 @@ def draw_lines_from_rectangles(rectangle1, rectangle2, n, window):
     c = center2.x
     d = center2.y
 
-    for _ in range(n):
+    for k in range(n):
         start = rg.Point(a, b)
         end = rg.Point(c, d)
         line = rg.Line(start, end)
@@ -364,7 +364,7 @@ def draw_lines_from_rectangles(rectangle1, rectangle2, n, window):
         b = b + height / 2
         c = c - width / 2
         d = d + height / 2
-        if _ % 2 == 0:
+        if k % 2 == 0:
             line.color = rectangle1.outline_color
         else:
             line.color = rectangle2.outline_color
